@@ -1,0 +1,190 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background: linear-gradient(to right, #ecf0f1, #bdc3c7); /* Added gradient background */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: auto; /* Ensure body is block-level */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+.header {
+    background: #FAFAFA; /* Updated background color */
+    color: #333333; /* Updated font color */
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Align logo to the left and nav to the right */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove underline */
+}
+
+.header .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.header .logo span {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.header .nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.header .nav-link {
+    color: #333333; /* Updated font color */
+    text-decoration: none;
+    margin: 10px;
+    transition: color 0.3s, transform 0.3s; /* Added transform transition */
+}
+
+.header .nav-link:hover {
+    color: #ff6f61; /* Light reddish color */
+    transform: scale(1.1); /* Added scale effect */
+}
+
+/* Sign In Container */
+.signin-container {
+    background: #FAFAFA; /* Updated background color */
+    padding: 2rem; /* Increased padding */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px; /* Increased max-width */
+    margin: 100px auto 20px; /* Center the container */
+}
+
+.signin-box h1 {
+    font-size: 2rem; /* Increased font size */
+    margin-bottom: 1.5rem; /* Increased margin-bottom */
+    color: #333333; /* Updated font color */
+    text-align: center; /* Center align the heading */
+}
+
+.form-group {
+    margin-bottom: 1.5rem; /* Increased margin-bottom */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333333; /* Updated font color */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem; /* Increased padding */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 1rem; /* Increased padding */
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s; /* Added transform transition */
+}
+
+.btn:hover {
+    background-color: #ff3b2f;
+    transform: scale(1.05); /* Added scale effect */
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 1.5rem; /* Increased margin-top */
+}
+
+.signup-link a {
+    color: #ff6f61; /* Red color */
+    text-decoration: none;
+    transition: color 0.3s, background-color 0.3s, padding 0.3s, border-radius 0.3s; /* Added transition for color, background-color, padding, and border-radius */
+}
+
+.signup-link a:hover {
+    color: white; /* White color on hover */
+    background-color: #ff6f61; /* Red background on hover */
+    padding: 0.5rem 1rem; /* Add padding on hover */
+    border-radius: 5px; /* Add border radius on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .header .logo {
+        margin-bottom: 10px;
+    }
+
+    .header .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header .nav-link {
+        margin: 5px 0;
+    }
+
+    .signin-container {
+        padding: 1rem;
+        margin-top: 80px;
+    }
+
+    .signin-box h1 {
+        font-size: 1.5rem;
+    }
+
+    .form-group input {
+        padding: 0.5rem;
+    }
+
+    .btn {
+        padding: 0.75rem;
+    }
+}
